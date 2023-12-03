@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pink">#A680FA</color>
+    <color name="yellow">#F5CA31</color>
+    <color name="line">#A1D9C8FF</color>
+    <color name="title">#D9C8FF</color>
+    <color name="text">#FAD9C8FF</color>
+    <color name="location_pink">#8E63EE</color>
+    <color name="location_yellow">#F5CA31</color>
+    <color name="bottom_sheet_background">#1A132B</color>
+    <color name="bottom_sheet_button_text">#2C1363</color>
+</resources>

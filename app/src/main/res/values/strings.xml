@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BottomSheet EVC</string>
+    <string name="open_in_google_maps">Open in Google Maps</string>
+    <string name="level_3">Level 3</string>
+    <string name="port_type">Port type</string>
+    <string name="cost">Cost</string>
+    <string name="_0_2_per_kwh">$0.2 per kwh</string>
+    <string name="power">Power</string>
+    <string name="_200_a_96_kw">200 A, 96 kW</string>
+    <string name="available_port_count">%d ports available</string>
+</resources>

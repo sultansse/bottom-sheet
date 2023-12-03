@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_bottom_sheet_background"
+    android:paddingBottom="32dp">
+
+    <TextView
+        android:id="@+id/available_ports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:text="8 ports available"
+        android:textColor="@color/pink"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/city"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        tools:text="Amsterdam, Netherlands"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        tools:text="street pulo 25"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        tools:text="ChargePoint Station 1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/station_image_view"
+        app:layout_constraintTop_toTopOf="@+id/station_image_view" />
+
+    <ImageView
+        android:id="@+id/station_image_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        tools:src="@drawable/ic_station_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/characteristics_card_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/bottom_sheet_background"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/available_ports"
+        app:strokeColor="@color/line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="24dp">
+
+            <TextView
+                android:id="@+id/port_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/port_type"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/level"
+                app:layout_constraintTop_toBottomOf="@+id/level" />
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/level_3"
+                app:layout_constraintStart_toEndOf="@+id/port_type_image_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/port_type_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_port_type"
+                app:layout_constraintBottom_toBottomOf="@+id/port_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/level" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/cost"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="@+id/cost_per_kwh"
+                app:layout_constraintTop_toBottomOf="@+id/cost_per_kwh" />
+
+            <TextView
+                android:id="@+id/cost_per_kwh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/_0_2_per_kwh"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/port_type"
+                app:layout_constraintTop_toBottomOf="@+id/port_type" />
+
+            <ImageView
+                android:id="@+id/cost_image_view"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_cost"
+                app:layout_constraintBottom_toBottomOf="@+id/cost"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cost_per_kwh" />
+
+            <TextView
+                android:id="@+id/power"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/power"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/cost"
+                app:layout_constraintTop_toBottomOf="@+id/cost" />
+
+            <TextView
+                android:id="@+id/power_in_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/_200_a_96_kw"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/power"
+                app:layout_constraintTop_toBottomOf="@+id/power" />
+
+            <ImageView
+                android:id="@+id/power_image_view"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="@+id/power_in_hour"
+                app:layout_constraintStart_toStartOf="@+id/cost_image_view"
+                app:layout_constraintTop_toTopOf="@+id/power" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/open_in_google_maps_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#8E63EE"
+        android:paddingVertical="16dp"
+        android:text="@string/open_in_google_maps"
+        android:textColor="@color/bottom_sheet_button_text"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characteristics_card_view" />
+
+    <ImageView
+        android:id="@+id/heading"
+        android:layout_width="60dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_bottom_sheet_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
